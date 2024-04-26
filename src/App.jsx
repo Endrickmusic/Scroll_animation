@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Logo from '/face-blowing-a-kiss.svg'
 import { Canvas } from "@react-three/fiber";
-import { Environment } from "@react-three/drei";
+import { Environment, ScrollControls } from "@react-three/drei";
 import Experience from "./Experience";
 import './index.css'
 
@@ -13,12 +13,19 @@ export default function App() {
     <Canvas shadows camera={{ position: [3, 3, 3], fov: 40 }}>
       <Environment
         files="./hdris/envmap.hdr" />
-        <color 
-          attach="background" 
-          args={["#aaefef"]} />
+      
+      <color 
+        attach="background" 
+        args={["#aaefef"]} />
+
+      <ScrollControls pages={3}>
+
       <Experience />
+
+      </ScrollControls>
+    
     </Canvas>
   
-  );
+  )
 }
 
