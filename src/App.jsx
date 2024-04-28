@@ -2,8 +2,11 @@ import { useState } from 'react'
 import Logo from '/face-blowing-a-kiss.svg'
 import { Canvas } from "@react-three/fiber";
 import { Environment, ScrollControls } from "@react-three/drei";
-import Experience from "./Experience";
+
 import './index.css'
+
+import Experience from "./Experience";
+
 
 export default function App() {
 
@@ -14,13 +17,14 @@ export default function App() {
       <Environment
         files="./hdris/envmap.hdr" />
       
-      <color 
+      {/* <color 
         attach="background" 
-        args={["#aaefef"]} />
+        args={["#aaefef"]} /> */}
 
       <ScrollControls pages={3}>
 
       <Experience />
+
 
       </ScrollControls>
     

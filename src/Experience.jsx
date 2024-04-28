@@ -59,6 +59,7 @@ export default function Experience(){
       enableZoom={false}
       />        */}
       <group
+        className='model'
         ref={group} 
         position={[0, 0, 0]}>
           <RoundedBox
@@ -83,8 +84,8 @@ export default function Experience(){
          />
           <meshStandardMaterial 
           color="hotpink"
-          metalness={0.5}
-          roughness={0.5}
+          metalness={1.0}
+          roughness={0.1}
           />
         </mesh>
       </group>
