@@ -1,6 +1,6 @@
-import { useRef, useEffect } from "react"
+import { useRef } from "react"
 import { useFrame, useThree } from "@react-three/fiber"
-import { OrbitControls, RoundedBox, useTexture, useScroll } from "@react-three/drei"
+import { RoundedBox, useTexture, useScroll } from "@react-three/drei"
 import { MathUtils } from "three"
 
 const rsqw = (t, delta = 0.1, a = 1, f = 1 / (2 * Math.PI)) => (a / Math.atan(1 / delta)) * Math.atan(Math.sin(2 * Math.PI * t * f) / delta)
