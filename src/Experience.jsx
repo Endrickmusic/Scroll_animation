@@ -6,7 +6,7 @@ import { MathUtils } from "three"
 const rsqw = (t, delta = 0.1, a = 1, f = 1 / (2 * Math.PI)) => (a / Math.atan(1 / delta)) * Math.atan(Math.sin(2 * Math.PI * t * f) / delta)
 
 
-export default function Experience(){
+export default function Experience({ scroll }){
 
   const boxRef = useRef()
   const cylRef = useRef()
@@ -14,11 +14,16 @@ export default function Experience(){
 
   const { camera } = useThree()
 
+
+
   const { width, height } = useThree((state) => state.viewport)
-  const scroll = useScroll()
+  
   const normalMap = useTexture('./textures/waternormals.jpeg')
 
   useFrame((state, delta) => {
+
+    console.log(scroll)
+
     const r1 = scroll.range(0 / 4, 1 / 4)
     const r2 = scroll.range(1 / 4, 1 / 4)
     const r3 = scroll.range(2 / 4, 1 / 4)
