@@ -6,7 +6,7 @@ import { MathUtils } from "three"
 const rsqw = (t, delta = 0.1, a = 1, f = 1 / (2 * Math.PI)) => (a / Math.atan(1 / delta)) * Math.atan(Math.sin(2 * Math.PI * t * f) / delta)
 
 
-export default function Experience({ scroll }){
+export default function Experience(){
 
   const boxRef = useRef()
   const cylRef = useRef()
@@ -14,7 +14,7 @@ export default function Experience({ scroll }){
 
   const { camera } = useThree()
 
-
+  const scroll = useScroll()
 
   const { width, height } = useThree((state) => state.viewport)
   
